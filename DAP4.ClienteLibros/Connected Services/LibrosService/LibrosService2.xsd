@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/WcfBibliotecaService/LibrosService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" />
+  <xs:element name="ObtenerLibroPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_libro" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLibroPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ObtenerLibroPorIdResult" nillable="true" type="q1:Libros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLibroPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="libro_nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLibroPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ObtenerLibroPorNombreResult" nillable="true" type="q2:Libros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarLibros">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarLibrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ListarLibrosResult" nillable="true" type="q3:ArrayOfLibros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarLibro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="libro_nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="libro_isbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="anio_publicacion" type="xs:int" />
+        <xs:element minOccurs="0" name="autor_nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="genero_nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarLibroResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarLibro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_libro" type="xs:int" />
+        <xs:element minOccurs="0" name="libro_nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="libro_isbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="anio_publicacion" type="xs:int" />
+        <xs:element minOccurs="0" name="autor_nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="genero_nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarLibroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ActualizarLibroResult" nillable="true" type="q4:Libros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarLibro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_libro" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarLibroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="EliminarLibroResult" nillable="true" type="q5:Libros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

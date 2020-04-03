@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a209d7fd-a31d-48ef-b502-40eac7fa9ecc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WcfBibliotecaService/PrestamosService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PrestamosService.xsd" MetadataType="Schema" ID="41bcc7a1-57d0-40bd-9877-22e4b9131c90" SourceId="1" SourceUrl="http://localhost/WcfBibliotecaService/PrestamosService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PrestamosService.disco" MetadataType="Disco" ID="2d5c27ba-9fac-4af8-899f-162291c914ff" SourceId="1" SourceUrl="http://localhost/WcfBibliotecaService/PrestamosService.svc?disco" />
+    <MetadataFile FileName="PrestamosService.wsdl" MetadataType="Wsdl" ID="952fcb24-c7c5-4ae0-a667-f1ca5dc423ab" SourceId="1" SourceUrl="http://localhost/WcfBibliotecaService/PrestamosService.svc?wsdl" />
+    <MetadataFile FileName="PrestamosService1.xsd" MetadataType="Schema" ID="105c219b-c681-40b4-b4df-b1ec27918ae0" SourceId="1" SourceUrl="http://localhost/WcfBibliotecaService/PrestamosService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PrestamosService2.xsd" MetadataType="Schema" ID="eb99d7a6-9acc-4477-9044-120ba878dc03" SourceId="1" SourceUrl="http://localhost/WcfBibliotecaService/PrestamosService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

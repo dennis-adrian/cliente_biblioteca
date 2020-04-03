@@ -1,0 +1,11 @@
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\bin\Debug\DAP4.ClienteLibros.exe.config
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\bin\Debug\DAP4.ClienteLibros.exe
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\bin\Debug\DAP4.ClienteLibros.pdb
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.csprojAssemblyReference.cache
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.Properties.Resources.resources
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.csproj.GenerateResource.cache
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.csproj.CoreCompileInputs.cache
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.exe
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.pdb
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.FormLibros.resources
+C:\Users\dagb\OneDrive\UTEPSA\dap4\proyecto_dap4_clientelibros\DAP4.ClienteLibros\obj\Debug\DAP4.ClienteLibros.Form1.resources
