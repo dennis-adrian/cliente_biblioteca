@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EmpleadosService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IEmpleadosService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/WcfBibliotecaService/EmpleadosService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/WcfBibliotecaService/EmpleadosService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/WcfBibliotecaService/EmpleadosService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEmpleadosService_ListarEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ListarEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ObtenerEmpleadosPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpleadosPorId" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ObtenerEmpleadosPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpleadosPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ObtenerEmpleadosPorApellido_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpleadosPorApellido" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ObtenerEmpleadosPorApellido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpleadosPorApellidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_InsertarEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_InsertarEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ActualizarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_ActualizarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_EliminarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IEmpleadosService_EliminarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEmpleadosService">
+    <wsdl:operation name="ListarEmpleados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpleadosService/ListarEmpleados" message="tns:IEmpleadosService_ListarEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpleadosService/ListarEmpleadosResponse" message="tns:IEmpleadosService_ListarEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleadosPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorId" message="tns:IEmpleadosService_ObtenerEmpleadosPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorIdResponse" message="tns:IEmpleadosService_ObtenerEmpleadosPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleadosPorApellido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorApellido" message="tns:IEmpleadosService_ObtenerEmpleadosPorApellido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorApellidoResponse" message="tns:IEmpleadosService_ObtenerEmpleadosPorApellido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEmpleados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpleadosService/InsertarEmpleados" message="tns:IEmpleadosService_InsertarEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpleadosService/InsertarEmpleadosResponse" message="tns:IEmpleadosService_InsertarEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpleadosService/ActualizarEmpleado" message="tns:IEmpleadosService_ActualizarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpleadosService/ActualizarEmpleadoResponse" message="tns:IEmpleadosService_ActualizarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpleadosService/EliminarEmpleado" message="tns:IEmpleadosService_EliminarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpleadosService/EliminarEmpleadoResponse" message="tns:IEmpleadosService_EliminarEmpleado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEmpleadosService" type="tns:IEmpleadosService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarEmpleados">
+      <soap:operation soapAction="http://tempuri.org/IEmpleadosService/ListarEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleadosPorId">
+      <soap:operation soapAction="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleadosPorApellido">
+      <soap:operation soapAction="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorApellido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEmpleados">
+      <soap:operation soapAction="http://tempuri.org/IEmpleadosService/InsertarEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IEmpleadosService/ActualizarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IEmpleadosService/EliminarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IEmpleadosService" type="tns:IEmpleadosService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IEmpleadosService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="ListarEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/IEmpleadosService/ListarEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleadosPorId">
+      <soap12:operation soapAction="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpleadosPorApellido">
+      <soap12:operation soapAction="http://tempuri.org/IEmpleadosService/ObtenerEmpleadosPorApellido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/IEmpleadosService/InsertarEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/IEmpleadosService/ActualizarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/IEmpleadosService/EliminarEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmpleadosService">
+    <wsdl:port name="BasicHttpBinding_IEmpleadosService" binding="tns:BasicHttpBinding_IEmpleadosService">
+      <soap:address location="http://localhost/WcfBibliotecaService/EmpleadosService.svc" />
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IEmpleadosService" binding="tns:NetTcpBinding_IEmpleadosService">
+      <soap12:address location="net.tcp://desktop-h376cnb/WcfBibliotecaService/EmpleadosService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://desktop-h376cnb/WcfBibliotecaService/EmpleadosService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/DESKTOP-H376CNB</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

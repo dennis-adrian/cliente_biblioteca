@@ -9,9 +9,6 @@ using DAP4.ClienteLibros.PrestamosService;
 using System.Net;
 using System.IO;
 using System.Runtime.Serialization.Json;
-using Newtonsoft.Json;
-using System.Runtime.Serialization.Formatters.Binary;
-using RestSharp;
 
 namespace DAP4.ClienteLibros
 {

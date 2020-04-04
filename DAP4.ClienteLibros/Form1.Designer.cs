@@ -123,6 +123,40 @@
             this.btnBuscarPrestamo = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dttFechaNacEmpleado = new System.Windows.Forms.DateTimePicker();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtEmailEmpleado = new System.Windows.Forms.TextBox();
+            this.txtTelefonoEmpleado = new System.Windows.Forms.TextBox();
+            this.txtCargoEmpleado = new System.Windows.Forms.TextBox();
+            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
+            this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
+            this.btnRegistrarEmpleado = new System.Windows.Forms.Button();
+            this.dtgEmpleados = new System.Windows.Forms.DataGridView();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.btnEliminarEmpleado = new System.Windows.Forms.Button();
+            this.btnActualizarEmpleado = new System.Windows.Forms.Button();
+            this.txtApellidoEmpleadoBusqueda = new System.Windows.Forms.TextBox();
+            this.txtIdEmpleadoBusqueda = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.dtgBusquedaEmpleado = new System.Windows.Forms.DataGridView();
+            this.btnBuscarEmpleado = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -142,6 +176,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgPrestamos)).BeginInit();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBusquedaPrestamos)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBusquedaEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -149,6 +189,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(16, 15);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
@@ -786,9 +827,9 @@
             this.label16.Location = new System.Drawing.Point(4, 58);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(191, 17);
+            this.label16.Size = new System.Drawing.Size(154, 17);
             this.label16.TabIndex = 30;
-            this.label16.Text = "Identifacion del clienteLibros:";
+            this.label16.Text = "Identifacion del Cliente:";
             // 
             // label17
             // 
@@ -1085,6 +1126,334 @@
             this.label15.TabIndex = 29;
             this.label15.Text = "Para buscar el prestamo ingrese el codigo";
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.tabControl5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1281, 579);
+            this.tabPage5.TabIndex = 3;
+            this.tabPage5.Text = "Empleados";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage6);
+            this.tabControl5.Controls.Add(this.tabPage9);
+            this.tabControl5.Location = new System.Drawing.Point(8, 9);
+            this.tabControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(1265, 561);
+            this.tabControl5.TabIndex = 2;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.dttFechaNacEmpleado);
+            this.tabPage6.Controls.Add(this.label24);
+            this.tabPage6.Controls.Add(this.label25);
+            this.tabPage6.Controls.Add(this.label26);
+            this.tabPage6.Controls.Add(this.label27);
+            this.tabPage6.Controls.Add(this.label28);
+            this.tabPage6.Controls.Add(this.label29);
+            this.tabPage6.Controls.Add(this.txtEmailEmpleado);
+            this.tabPage6.Controls.Add(this.txtTelefonoEmpleado);
+            this.tabPage6.Controls.Add(this.txtCargoEmpleado);
+            this.tabPage6.Controls.Add(this.txtNombreEmpleado);
+            this.tabPage6.Controls.Add(this.txtApellidoEmpleado);
+            this.tabPage6.Controls.Add(this.btnRegistrarEmpleado);
+            this.tabPage6.Controls.Add(this.dtgEmpleados);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Size = new System.Drawing.Size(1257, 532);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Registrar";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dttFechaNacEmpleado
+            // 
+            this.dttFechaNacEmpleado.Location = new System.Drawing.Point(482, 34);
+            this.dttFechaNacEmpleado.Name = "dttFechaNacEmpleado";
+            this.dttFechaNacEmpleado.Size = new System.Drawing.Size(200, 22);
+            this.dttFechaNacEmpleado.TabIndex = 15;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(359, 65);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(42, 17);
+            this.label24.TabIndex = 14;
+            this.label24.Text = "Email";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(252, 65);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 17);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Telefono";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(18, 65);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(46, 17);
+            this.label26.TabIndex = 12;
+            this.label26.Text = "Cargo";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(479, 10);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(141, 17);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Fecha de Nacimiento";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(252, 8);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(125, 17);
+            this.label28.TabIndex = 10;
+            this.label28.Text = "Nombre Empleado";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(21, 8);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(125, 17);
+            this.label29.TabIndex = 9;
+            this.label29.Text = "Apellido Empleado";
+            // 
+            // txtEmailEmpleado
+            // 
+            this.txtEmailEmpleado.Location = new System.Drawing.Point(362, 89);
+            this.txtEmailEmpleado.Name = "txtEmailEmpleado";
+            this.txtEmailEmpleado.Size = new System.Drawing.Size(320, 22);
+            this.txtEmailEmpleado.TabIndex = 8;
+            // 
+            // txtTelefonoEmpleado
+            // 
+            this.txtTelefonoEmpleado.Location = new System.Drawing.Point(255, 89);
+            this.txtTelefonoEmpleado.Name = "txtTelefonoEmpleado";
+            this.txtTelefonoEmpleado.Size = new System.Drawing.Size(101, 22);
+            this.txtTelefonoEmpleado.TabIndex = 7;
+            // 
+            // txtCargoEmpleado
+            // 
+            this.txtCargoEmpleado.Location = new System.Drawing.Point(21, 89);
+            this.txtCargoEmpleado.Name = "txtCargoEmpleado";
+            this.txtCargoEmpleado.Size = new System.Drawing.Size(228, 22);
+            this.txtCargoEmpleado.TabIndex = 6;
+            // 
+            // txtNombreEmpleado
+            // 
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(255, 34);
+            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(221, 22);
+            this.txtNombreEmpleado.TabIndex = 4;
+            // 
+            // txtApellidoEmpleado
+            // 
+            this.txtApellidoEmpleado.Location = new System.Drawing.Point(21, 34);
+            this.txtApellidoEmpleado.Name = "txtApellidoEmpleado";
+            this.txtApellidoEmpleado.Size = new System.Drawing.Size(228, 22);
+            this.txtApellidoEmpleado.TabIndex = 3;
+            // 
+            // btnRegistrarEmpleado
+            // 
+            this.btnRegistrarEmpleado.Location = new System.Drawing.Point(804, 49);
+            this.btnRegistrarEmpleado.Name = "btnRegistrarEmpleado";
+            this.btnRegistrarEmpleado.Size = new System.Drawing.Size(152, 33);
+            this.btnRegistrarEmpleado.TabIndex = 2;
+            this.btnRegistrarEmpleado.Text = "Registrar Empleado";
+            this.btnRegistrarEmpleado.UseVisualStyleBackColor = true;
+            this.btnRegistrarEmpleado.Click += new System.EventHandler(this.btnRegistrarEmpleado_Click);
+            // 
+            // dtgEmpleados
+            // 
+            this.dtgEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmpleados.Location = new System.Drawing.Point(21, 146);
+            this.dtgEmpleados.Name = "dtgEmpleados";
+            this.dtgEmpleados.RowHeadersWidth = 51;
+            this.dtgEmpleados.RowTemplate.Height = 24;
+            this.dtgEmpleados.Size = new System.Drawing.Size(1057, 319);
+            this.dtgEmpleados.TabIndex = 1;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.btnEliminarEmpleado);
+            this.tabPage9.Controls.Add(this.btnActualizarEmpleado);
+            this.tabPage9.Controls.Add(this.txtApellidoEmpleadoBusqueda);
+            this.tabPage9.Controls.Add(this.txtIdEmpleadoBusqueda);
+            this.tabPage9.Controls.Add(this.label30);
+            this.tabPage9.Controls.Add(this.dtgBusquedaEmpleado);
+            this.tabPage9.Controls.Add(this.btnBuscarEmpleado);
+            this.tabPage9.Controls.Add(this.label31);
+            this.tabPage9.Controls.Add(this.label32);
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Size = new System.Drawing.Size(1257, 532);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "Buscar/Editar/Eliminar";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarEmpleado
+            // 
+            this.btnEliminarEmpleado.Location = new System.Drawing.Point(878, 69);
+            this.btnEliminarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
+            this.btnEliminarEmpleado.Size = new System.Drawing.Size(136, 42);
+            this.btnEliminarEmpleado.TabIndex = 37;
+            this.btnEliminarEmpleado.Text = "Eliminar Empleado";
+            this.btnEliminarEmpleado.UseVisualStyleBackColor = true;
+            this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminarEmpleado_Click);
+            // 
+            // btnActualizarEmpleado
+            // 
+            this.btnActualizarEmpleado.Location = new System.Drawing.Point(715, 69);
+            this.btnActualizarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizarEmpleado.Name = "btnActualizarEmpleado";
+            this.btnActualizarEmpleado.Size = new System.Drawing.Size(136, 42);
+            this.btnActualizarEmpleado.TabIndex = 36;
+            this.btnActualizarEmpleado.Text = "Guardar Cambios";
+            this.btnActualizarEmpleado.UseVisualStyleBackColor = true;
+            this.btnActualizarEmpleado.Click += new System.EventHandler(this.btnActualizarEmpleado_Click);
+            // 
+            // txtApellidoEmpleadoBusqueda
+            // 
+            this.txtApellidoEmpleadoBusqueda.Location = new System.Drawing.Point(270, 79);
+            this.txtApellidoEmpleadoBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellidoEmpleadoBusqueda.Name = "txtApellidoEmpleadoBusqueda";
+            this.txtApellidoEmpleadoBusqueda.Size = new System.Drawing.Size(237, 22);
+            this.txtApellidoEmpleadoBusqueda.TabIndex = 35;
+            // 
+            // txtIdEmpleadoBusqueda
+            // 
+            this.txtIdEmpleadoBusqueda.Location = new System.Drawing.Point(4, 79);
+            this.txtIdEmpleadoBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdEmpleadoBusqueda.Name = "txtIdEmpleadoBusqueda";
+            this.txtIdEmpleadoBusqueda.Size = new System.Drawing.Size(237, 22);
+            this.txtIdEmpleadoBusqueda.TabIndex = 31;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(270, 58);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(152, 17);
+            this.label30.TabIndex = 34;
+            this.label30.Text = "Apellido del Empleado:";
+            // 
+            // dtgBusquedaEmpleado
+            // 
+            this.dtgBusquedaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgBusquedaEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn10});
+            this.dtgBusquedaEmpleado.Location = new System.Drawing.Point(4, 141);
+            this.dtgBusquedaEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgBusquedaEmpleado.Name = "dtgBusquedaEmpleado";
+            this.dtgBusquedaEmpleado.RowHeadersWidth = 51;
+            this.dtgBusquedaEmpleado.Size = new System.Drawing.Size(1010, 143);
+            this.dtgBusquedaEmpleado.TabIndex = 33;
+            // 
+            // btnBuscarEmpleado
+            // 
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(545, 69);
+            this.btnBuscarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
+            this.btnBuscarEmpleado.Size = new System.Drawing.Size(136, 42);
+            this.btnBuscarEmpleado.TabIndex = 32;
+            this.btnBuscarEmpleado.Text = "Buscar Empleado";
+            this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(4, 58);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(174, 17);
+            this.label31.TabIndex = 30;
+            this.label31.Text = "Identifacion del Empleado:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(3, 19);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(474, 20);
+            this.label32.TabIndex = 29;
+            this.label32.Text = "Para buscar un empleado ingrese el numero de id o el apellido";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Identificacion";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Apellido ";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Cargo";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Fecha de Nacimiento";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Email ";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1119,6 +1488,14 @@
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgBusquedaPrestamos)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgBusquedaEmpleado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1220,6 +1597,40 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDomicilio;
         private System.Windows.Forms.TextBox txtNombreClienteIsrt;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.DateTimePicker dttFechaNacEmpleado;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtEmailEmpleado;
+        private System.Windows.Forms.TextBox txtTelefonoEmpleado;
+        private System.Windows.Forms.TextBox txtCargoEmpleado;
+        private System.Windows.Forms.TextBox txtNombreEmpleado;
+        private System.Windows.Forms.TextBox txtApellidoEmpleado;
+        private System.Windows.Forms.Button btnRegistrarEmpleado;
+        private System.Windows.Forms.DataGridView dtgEmpleados;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Button btnEliminarEmpleado;
+        private System.Windows.Forms.Button btnActualizarEmpleado;
+        private System.Windows.Forms.TextBox txtApellidoEmpleadoBusqueda;
+        private System.Windows.Forms.TextBox txtIdEmpleadoBusqueda;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DataGridView dtgBusquedaEmpleado;
+        private System.Windows.Forms.Button btnBuscarEmpleado;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }
 

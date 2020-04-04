@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\EmpleadosService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\LibrosService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,7 +81,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MetodosClientes.cs" />
+    <Compile Include="MetodosEmpleados.cs" />
     <Compile Include="MetodosPrestamos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +109,19 @@
     </None>
     <None Include="Connected Services\ClientesService\DAP4.ClienteLibros.ClientesService.Clientes.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadosService\DAP4.ClienteLibros.EmpleadosService.Empleados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadosService\EmpleadosService.wsdl" />
+    <None Include="Connected Services\EmpleadosService\EmpleadosService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmpleadosService\EmpleadosService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmpleadosService\EmpleadosService2.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\LibrosService\DAP4.ClienteLibros.LibrosService.Libros.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -150,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ClientesService\" />
+    <WCFMetadataStorage Include="Connected Services\EmpleadosService\" />
     <WCFMetadataStorage Include="Connected Services\LibrosService\" />
     <WCFMetadataStorage Include="Connected Services\PrestamosService\" />
   </ItemGroup>
@@ -191,6 +210,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ClientesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmpleadosService\EmpleadosService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmpleadosService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmpleadosService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EmpleadosService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

@@ -11,9 +11,10 @@ using System.Windows.Forms;
 
 using DAP4.ClienteLibros.LibrosService;
 using DAP4.ClienteLibros.ClientesService;
+using DAP4.ClienteLibros.PrestamosService;
+using DAP4.ClienteLibros.EmpleadosService;
 
 //para usar REST
-using DAP4.ClienteLibros.PrestamosService;
 using System.Net;
 using System.IO;
 using System.Runtime.Serialization.Json;
@@ -26,8 +27,8 @@ namespace DAP4.ClienteLibros
         LibrosServiceClient clienteLibros = new LibrosServiceClient();
         ClientesServiceClient clienteClientes = new ClientesServiceClient();
         MetodosPrestamos metodosPrestamos = new MetodosPrestamos();
+        MetodosEmpleados metodosEmpleados = new MetodosEmpleados();
 
-                
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace DAP4.ClienteLibros
             dtgLibros.DataSource = clienteLibros.ListarLibros();
             dtgPrestamos.DataSource = metodosPrestamos.listarPrestamos();
             dtgClientes.DataSource = clienteClientes.ListarClientes();
+            dtgEmpleados.DataSource = metodosEmpleados.listarEmpleados();
         }
         #region ServicioLibros
         private void btnInsert_Click(object sender, EventArgs e)
@@ -203,7 +205,7 @@ namespace DAP4.ClienteLibros
             catch
             {
 
-                MessageBox.Show("El libro cliente no se encuentra en la base de datos");
+                MessageBox.Show("El cliente no se encuentra en la base de datos");
             }
 
             txtIdClienteBusqueda.Clear();
@@ -400,5 +402,126 @@ namespace DAP4.ClienteLibros
         }
         #endregion
 
+        #region ServicioEmpleados
+        private void btnRegistrarEmpleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Empleados empleado = new Empleados()
+                {
+                    empleado_nombre = txtNombreEmpleado.Text,
+                    empleado_apellido = txtApellidoEmpleado.Text,
+                    empleado_cargo = txtCargoEmpleado.Text,
+                    empleado_telefono = txtTelefonoEmpleado.Text,
+                    empleado_email = txtEmailEmpleado.Text,
+                    empleado_fecha_nac = dttFechaNacEmpleado.Value,
+                    id_empleado = 0
+                };
+                metodosEmpleados.insertarEmpleado(empleado);
+
+                MessageBox.Show("Se resgistró el empleado " + " \""+ empleado.empleado_apellido + " " + empleado.empleado_nombre + "\"" + " satisfactoriamente.");
+                dtgEmpleados.DataSource = metodosEmpleados.listarEmpleados();
+
+            }
+            catch
+            {
+                MessageBox.Show("No se pudo registrar el empleado. Verifique los datos ingresados");
+            }
+        }
+
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
+        {
+            dtgBusquedaEmpleado.Rows.Clear();
+
+            try
+            {
+                if (String.IsNullOrWhiteSpace(txtIdEmpleadoBusqueda.Text))
+                {
+                    var apellido = txtApellidoEmpleadoBusqueda.Text;
+
+                    var empleado = metodosEmpleados.obtenerEmpleadoPorApellido(apellido);
+
+                    dtgBusquedaEmpleado.Rows.Add(empleado.id_empleado, empleado.empleado_apellido, empleado.empleado_nombre, empleado.empleado_cargo, empleado.empleado_fecha_nac.ToString("MM/dd/yyyy"), empleado.empleado_telefono, empleado.empleado_email);
+
+                }
+                else
+                {
+                    var id = txtIdEmpleadoBusqueda.Text;
+
+                    var empleado = metodosEmpleados.obtenerEmpleadoPorId(id);
+
+                    dtgBusquedaEmpleado.Rows.Add(empleado.id_empleado, empleado.empleado_apellido, empleado.empleado_nombre, empleado.empleado_cargo, empleado.empleado_fecha_nac.ToString("MM/dd/yyyy"), empleado.empleado_telefono, empleado.empleado_email);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+                //MessageBox.Show("El empleado no se encuentra en la base de datos");
+            }
+
+            txtIdEmpleadoBusqueda.Clear();
+            txtApellidoEmpleadoBusqueda.Clear();
+        }
+
+        private void btnActualizarEmpleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var id = dtgBusquedaEmpleado.Rows[0].Cells[0].Value.ToString();
+                var apellidoEmpleado = dtgBusquedaEmpleado.Rows[0].Cells[1].Value.ToString();
+                var nombreEmpleado = dtgBusquedaEmpleado.Rows[0].Cells[2].Value.ToString();
+                var cargoEmpleado = dtgBusquedaEmpleado.Rows[0].Cells[3].Value.ToString();
+                var fechaNacEmpleado = dtgBusquedaEmpleado.Rows[0].Cells[4].Value.ToString();
+                var telefonoEmpleado = dtgBusquedaEmpleado.Rows[0].Cells[5].Value.ToString();
+                var emailEmpleado = dtgBusquedaEmpleado.Rows[0].Cells[6].Value.ToString();
+
+                Empleados empleado = new Empleados()
+                {
+                    id_empleado = Convert.ToInt32(id),
+                    empleado_nombre = nombreEmpleado,
+                    empleado_apellido = apellidoEmpleado,
+                    empleado_cargo = cargoEmpleado,
+                    empleado_fecha_nac = Convert.ToDateTime(fechaNacEmpleado),
+                    empleado_telefono = telefonoEmpleado,
+                    empleado_email = emailEmpleado
+                };
+
+                metodosEmpleados.actualizarEmpleado(empleado);
+                MessageBox.Show("Se actualizaron los datos correctamente.");
+                txtApellidoEmpleadoBusqueda.Clear();
+                txtIdEmpleadoBusqueda.Clear();
+                dtgEmpleados.DataSource = metodosEmpleados.listarEmpleados();
+            }
+            catch
+            {
+                MessageBox.Show("No se pudieron actualizar los datos del préstamo.");
+            }
+        }
+
+        private void btnEliminarEmpleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = dtgBusquedaEmpleado.Rows[0].Cells[0].Value.ToString();
+
+                metodosEmpleados.elimnarEmpleado(id);
+
+                MessageBox.Show("Los datos del empleado han sido eliminados.");
+
+                dtgBusquedaEmpleado.Rows.Clear();
+
+                txtIdEmpleadoBusqueda.Clear();
+                txtApellidoEmpleadoBusqueda.Clear();
+
+                dtgEmpleados.DataSource = metodosEmpleados.listarEmpleados();
+            }
+            catch(Exception)
+            {
+                throw;
+                //MessageBox.Show("No se pudo eliminar al empleado. Revise que el loa datos esten correctos."); ;
+            }
+        }
+        #endregion
     }
 }

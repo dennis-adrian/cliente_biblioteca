@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/WcfBibliotecaService/EmpleadosService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" />
+  <xs:element name="ListarEmpleados">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarEmpleadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ListarEmpleadosResult" nillable="true" type="q1:ArrayOfEmpleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ObtenerEmpleadosPorIdResult" nillable="true" type="q2:Empleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosPorApellido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="apellido" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadosPorApellidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ObtenerEmpleadosPorApellidoResult" nillable="true" type="q3:Empleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarEmpleados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="empleado" nillable="true" type="q4:Empleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarEmpleadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="InsertarEmpleadosResult" nillable="true" type="q5:Empleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="empleado" nillable="true" type="q6:Empleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DAP4.Biblioteca.Dominio" minOccurs="0" name="ActualizarEmpleadoResult" nillable="true" type="q7:Empleados" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarEmpleadoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
